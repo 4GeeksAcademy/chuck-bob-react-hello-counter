@@ -8,8 +8,23 @@ const Home = () => {
 	let tenThouCounter = 0;
 	let hunThouCounter = 0;
 
+	
 	function updateCounter() {
-		document.getElementById('app').innerText = hunThouCounter + "" + tenThouCounter + "" + thouCounter + "" + hunCounter + "" + tensCounter + "" + counter   //display on the page
+		document.getElementById('app').innerHTML =
+		`<div style="display: flex; gap: 10px; background-color: black; color: white; padding: 10px; justify-content: center; font-size: 3rem;">
+		  <div> IMAGE </div>
+		  <div>${hunThouCounter}</div>
+		  <div>${tenThouCounter}</div>
+		  <div>${thouCounter}</div>
+		  <div>${hunCounter}</div>
+		  <div>${tensCounter}</div>
+		  <div>${counter}</div>
+		</div>`; // Display on the page
+
+	// function updateCounter() {
+	// 	// document.getElementById('app').innerHTML = hunThouCounter + "" + tenThouCounter + "" + thouCounter + "" + hunCounter + "" + tensCounter + "" + counter   //display on the page
+	// 	document.getElementById('app').innerHTML = displayCount //display on the page
+
 
 		console.log(counter); // This will display the counter value in the console
 		counter++;
